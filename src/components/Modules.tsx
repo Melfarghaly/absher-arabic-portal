@@ -5,7 +5,8 @@ import {
   UsersIcon, 
   LayoutDashboardIcon, 
   ShoppingCartIcon, 
-  PieChartIcon 
+  PieChartIcon,
+  CheckIcon 
 } from 'lucide-react';
 
 const Modules = () => {
@@ -34,22 +35,31 @@ const Modules = () => {
       title: 'لوحة التحكم',
       icon: LayoutDashboardIcon,
       description: 'لوحة تحكم ذكية تعرض أهم مؤشرات الأداء وملخص الحسابات'
+    },
+    {
+      title: 'فواتير زاتكا',
+      icon: CheckIcon,
+      description: 'إصدار فواتير إلكترونية متوافقة تماماً مع متطلبات هيئة الزكاة والضريبة والجمارك'
     }
   ];
 
   return (
     <section id="modules" className="py-16 md:py-24 bg-absher-beige/20 clip-diagonal-reverse">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-absher-dark mb-4">وحدات <span className="text-absher-teal">نظام أبشر</span></h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             يتكون نظام أبشر المحاسبي من عدة وحدات متكاملة تغطي جميع احتياجات عملك
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
           {modules.map((module, index) => (
-            <Card key={index} className="overflow-hidden shadow-absher hover:shadow-lg transition-all feature-card">
+            <Card 
+              key={index} 
+              className="overflow-hidden shadow-absher hover:shadow-lg transition-all hover:-translate-y-2 duration-300 feature-card"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               <CardContent className="p-6 text-center">
                 <div className="flex justify-center mb-4">
                   <div className="bg-absher-teal/10 p-4 rounded-full">

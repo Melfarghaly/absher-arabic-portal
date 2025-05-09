@@ -27,12 +27,16 @@ const Features = () => {
       title: 'متوافق مع الضرائب',
       description: 'متوافق بشكل كامل مع متطلبات الهيئات الضريبية المحلية والدولية'
     },
+    {
+      title: 'متوافق مع هيئة الزكاة والدخل',
+      description: 'نظام معتمد ومرتبط مع هيئة الزكاة والضريبة والجمارك (زاتكا) لإصدار فواتير مطابقة لكافة المواصفات'
+    },
   ];
 
   return (
     <section id="features" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-absher-dark mb-4">مميزات <span className="text-absher-teal">نظام أبشر</span></h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             يتميز نظام أبشر المحاسبي بالعديد من المزايا التي تساعدك على إدارة أعمالك بكفاءة وفعالية
@@ -43,7 +47,8 @@ const Features = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="bg-white p-6 rounded-lg shadow-md border border-gray-100 feature-card transition-all duration-300"
+              className="bg-white p-6 rounded-lg shadow-md border border-gray-100 feature-card transition-all duration-300 hover:-translate-y-2"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center mb-4">
                 <div className="bg-absher-teal/10 p-2 rounded-full mr-4">

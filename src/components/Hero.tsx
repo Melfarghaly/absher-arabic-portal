@@ -6,21 +6,24 @@ const Hero = () => {
     <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-absher-beige/30 to-white clip-diagonal overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="text-right order-2 md:order-1">
+          <div className="text-right order-2 md:order-1 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-absher-dark mb-4">
               نظام <span className="text-absher-teal">أبشر</span> المحاسبي
             </h1>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-absher-dark mb-6">
               أفضل نظام محاسبي متكامل لإدارة أعمالك
             </h2>
-            <p className="text-lg text-gray-700 mb-8">
+            <p className="text-lg text-gray-700 mb-4">
               نظام متكامل لإدارة الشركات والمؤسسات بجميع أحجامها. يوفر حلول محاسبية متكاملة للفواتير والمخازن والحسابات وإدارة الموظفين بكفاءة عالية.
             </p>
+            <p className="text-lg text-absher-teal font-semibold mb-8 animate-pulse">
+              معتمد ومتوافق مع متطلبات هيئة الزكاة والضريبة والجمارك (زاتكا)
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-start items-center sm:justify-start">
-              <Button className="bg-absher-teal hover:bg-absher-teal/90 text-white px-8 py-6 text-lg w-full sm:w-auto">
+              <Button className="bg-absher-teal hover:bg-absher-teal/90 text-white px-8 py-6 text-lg w-full sm:w-auto hover:scale-105 transition-all">
                 طلب عرض مجاني
               </Button>
-              <Button variant="outline" className="border-absher-teal text-absher-teal hover:bg-absher-teal/10 px-8 py-6 text-lg w-full sm:w-auto">
+              <Button variant="outline" className="border-absher-teal text-absher-teal hover:bg-absher-teal/10 px-8 py-6 text-lg w-full sm:w-auto hover:scale-105 transition-all">
                 تواصل معنا
               </Button>
             </div>
